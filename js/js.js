@@ -1,7 +1,7 @@
 function pageLoaded(){
     async function spaceX(){
         let url = 'https://api.spacexdata.com/v3/launches/latest?pretty=true';
-        let secondUrl;;
+        let secondUrl;
         let info = await fetch(url);
         let users = await info.json();
         document.querySelector('body').style.margin='0';
@@ -9,7 +9,7 @@ function pageLoaded(){
         document.querySelector('body').insertAdjacentElement('afterbegin', main);
         let mainPageVideo = document.querySelector('iframe');
         mainPageVideo.style.display='none';
-        main.style.display.block;
+        main.style.display = 'block';
         main.style.width = '100%';
         main.style.height = 'auto';
         function createFooter(){ 
@@ -232,6 +232,8 @@ function pageLoaded(){
             mainPageInfo.insertAdjacentElement('beforeend', mainPageVideo);
             mainPageVideo.style.display = 'block';
             mainPageVideo.style.width = '100%';
+            mainPageVideo.style.marginBottom = '57px';
+            console.log(users)
         }
         createMainPage()
         function createSlider(){
